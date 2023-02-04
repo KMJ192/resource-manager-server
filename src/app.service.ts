@@ -7,7 +7,7 @@ export class AppService {
   }
 
   async test(): Promise<number> {
-    const test = await import('@root/wasm_module/pkg').then((wasm) => {
+    const test = await import('@wasm/pkg').then((wasm) => {
       const result = wasm.test();
       return result;
     });

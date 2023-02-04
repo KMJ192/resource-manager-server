@@ -10,8 +10,9 @@ const WasmPackPlugin = require('@wasm-tool/wasm-pack-plugin');
 module.exports = function (options, webpack) {
   options.resolve.alias = {
     ...options.resolve.alias,
-    '@src': path.resolve(__dirname, 'src'),
     '@root': path.resolve(__dirname, '.'),
+    '@src': path.resolve(__dirname, 'src'),
+    '@wasm': path.resolve(__dirname, 'wasm_module'),
   };
   return {
     ...options,

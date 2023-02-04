@@ -11,8 +11,9 @@
     "outDir": "./dist",
     "baseUrl": "./",
     "paths": {
+      "@root/*": ["*"],
       "@src/*": ["src/*"],
-      "@root/*": ["*"]
+      "@wasm/*": ["wasm_module/*"]
     },
     "incremental": true,
     "skipLibCheck": true,
@@ -21,5 +22,7 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false
-  }
+  },
+  "exclude": ["node_modules"],
+  "include": [".", "src/**/*", "types", "types/declaration.d.ts"]
 }
