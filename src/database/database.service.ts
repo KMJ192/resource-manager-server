@@ -17,6 +17,7 @@ export class DatabaseService implements OnModuleInit {
       };
 
       this.CP = mysql.createPool(config);
+
       console.log(`✅ START MYSQL CONNECTION.`);
     }
   };
